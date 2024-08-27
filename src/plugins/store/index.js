@@ -3,7 +3,7 @@ import { helpers } from '@/helpers'
 import axios from 'axios'
 import { setTimeout } from 'core-js'
 
-const BaseUrl = 'api.openweathermap.org'
+const BaseUrl = 'https://api.openweathermap.org'
 const ApiKey = 'aac83767543fcb6bf21314448eb9e460'
 
 export const store = createStore({
@@ -109,7 +109,7 @@ export const store = createStore({
   },
   actions: {
     getTodayWeather(context, location) {
-      axios.get(`https://${BaseUrl}/data/2.5/weather?q=${helpers.formatLocation(location)}&appid=${ApiKey}`).then((response) => {
+      axios.get(`${BaseUrl}/data/2.5/weather?q=${helpers.formatLocation(location)}&appid=${ApiKey}`).then((response) => {
         context.commit('getTodayWeather', response.data)
       }).catch((error) => {
         console.log(error);
@@ -117,7 +117,7 @@ export const store = createStore({
       })
     },
     getNextSevenWeather(context, location) {
-      axios.get(`https://${BaseUrl}/data/2.5/forecast?q=${helpers.formatLocation(location)}&appid=${ApiKey}`).then((response) => {
+      axios.get(`${BaseUrl}/data/2.5/forecast?q=${helpers.formatLocation(location)}&appid=${ApiKey}`).then((response) => {
         context.commit('getSevenDaysWeather', response.data)
       }).catch((error) => {
         console.log(error);
@@ -125,7 +125,7 @@ export const store = createStore({
       })
     },
     getCurrentCity(context, coords) { // get a location's name with its co-ordinates
-      axios.get(`https://${BaseUrl}/geo/1.0/reverse?lat=${coords.latitude}&lon=${coords.longitude}&appid=${ApiKey}&exclude=local_names`).then((response) => {
+      axios.get(`${BaseUrl}/geo/1.0/reverse?lat=${coords.latitude}&lon=${coords.longitude}&appid=${ApiKey}&exclude=local_names`).then((response) => {
         console.log(response.data)
         context.commit('getCurrentCity', response.data)
       }).catch((error) => {

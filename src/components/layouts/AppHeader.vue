@@ -19,11 +19,11 @@
       </div>
       <h3 class="ml-2 "> <router-link to="/"> <span class="site-name">Weather App</span> </router-link></h3>
       <v-spacer></v-spacer>
-      <!-- <v-switch @click:append="toggleTheme" @click:prepend="toggleTheme" prepend-icon="mdi-weather-sunny"
-        append-icon="mdi-weather-sunny-off"></v-switch> -->
-      <v-btn :prepend-icon="theme === 'myCustomLightTheme' ? 'mdi-weather-sunny' : 'mdi-weather-night'" text="Toggle Theme" slim
+      <v-switch @click="toggleTheme"  prepend-icon="mdi-weather-sunny"
+        append-icon="mdi-weather-sunny-off"></v-switch>
+      <!-- <v-btn :prepend-icon="theme === 'myCustomLightTheme' ? 'mdi-weather-sunny' : 'mdi-weather-night'" text="Toggle Theme" slim
         @click="toggleTheme">
-      </v-btn>
+      </v-btn> -->
     </v-app-bar>
   </v-container>
 </template>
