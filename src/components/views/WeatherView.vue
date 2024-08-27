@@ -65,6 +65,7 @@ export default {
             console.log(err)
         }
     },
+    
     computed: {
         buttonEnabled() {
            // console.log(this.$store.state.currentCity)
