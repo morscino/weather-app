@@ -125,7 +125,7 @@ export const store = createStore({
       })
     },
     getCurrentCity(context, coords) { // get a location's name with its co-ordinates
-      axios.get(`http://${BaseUrl}/geo/1.0/reverse?lat=${coords.latitude}&lon=${coords.longitude}&appid=${ApiKey}&exclude=local_names`).then((response) => {
+      axios.get(`https://${BaseUrl}/geo/1.0/reverse?lat=${coords.latitude}&lon=${coords.longitude}&appid=${ApiKey}&exclude=local_names`).then((response) => {
         console.log(response.data)
         context.commit('getCurrentCity', response.data)
       }).catch((error) => {
