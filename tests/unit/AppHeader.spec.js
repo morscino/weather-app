@@ -11,6 +11,6 @@ describe('AppHeader.vue', () => {
         }
       },
     })
-    expect(wrapper.text()).toMatch(msg)
+    expect(wrapper.text()).toMatch(siteName)
   })
 })
