@@ -3,8 +3,8 @@ import { helpers } from '@/helpers'
 import axios from 'axios'
 import { setTimeout } from 'core-js'
 
-const BaseUrl = process.env.VUE_APP_ENV_OPEN_WEATHER_BASE_URL
-const ApiKey = process.env.VUE_APP_ENV_OPEN_WEATHER_API_KEY
+const BaseUrl = 'api.openweathermap.org'
+const ApiKey = 'aac83767543fcb6bf21314448eb9e460'
 
 export const store = createStore({
   state() {

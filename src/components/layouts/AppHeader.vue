@@ -35,9 +35,10 @@
 
 <script>
 
-import { useTheme } from 'vuetify'
+ import { useTheme } from 'vuetify'
 
 export default {
+  
   data() {
     return {
       color:'error',
@@ -52,6 +53,7 @@ export default {
     }
   },
   setup() {
+   
     const theme = useTheme()
 
     function toggleTheme() {
