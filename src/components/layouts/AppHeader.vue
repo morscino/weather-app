@@ -17,13 +17,13 @@
             width="40" />
         </router-link>
       </div>
-      <h3 class="ml-2 "> <router-link to="/"> <span class="site-name">Weather App</span> </router-link></h3>
+      <h3 class="ml-2 d-none d-sm-flex"> <router-link to="/"> <span class="site-name">Weather App</span> </router-link></h3>
       <v-spacer></v-spacer>
-      <v-switch @click="toggleTheme"  prepend-icon="mdi-weather-sunny"
+      <div class="mt-6">
+        <v-switch  @click="toggleTheme"  prepend-icon="mdi-weather-sunny"
         append-icon="mdi-weather-sunny-off"></v-switch>
-      <!-- <v-btn :prepend-icon="theme === 'myCustomLightTheme' ? 'mdi-weather-sunny' : 'mdi-weather-night'" text="Toggle Theme" slim
-        @click="toggleTheme">
-      </v-btn> -->
+      </div>
+      
     </v-app-bar>
   </v-container>
 </template>
